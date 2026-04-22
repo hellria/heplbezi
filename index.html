@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Odpočet</title>
+  <style>
+    body { display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; font-size:40px; }
+  </style>
+</head>
+<body>
+  <div id="countdown"></div>
+
+  <script>
+    const target = new Date("2026-12-31T23:59:59").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = target - now;
+
+      const d = Math.floor(diff / (1000*60*60*24));
+      const h = Math.floor((diff / (1000*60*60)) % 24);
+      const m = Math.floor((diff / (1000*60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countdown").innerHTML =
+        `${d}d ${h}h ${m}m ${s}s`;
+    }, 1000);
+  </script>
+</body>
+</html>
+
