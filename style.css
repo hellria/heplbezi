@@ -1,0 +1,6 @@
+body {
+  background-image: url("images/background.jpg");
+  background-size: cover;        /* roztáhne přes celou stránku */
+  background-position: center;   /* vystředí obrázek */
+  background-repeat: no-repeat;  /* neopakuje se */
+}
